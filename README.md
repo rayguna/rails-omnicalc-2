@@ -6,7 +6,7 @@ RCAV flowchart: https://learn.firstdraft.com/lessons/120-rcav-flowchart
 
 Lesson: https://learn.firstdraft.com/lessons/124
 
-Notes:
+Notes: This is a good template example for building a rails-based web app to mimic the folder structure.
 
 1. Run the app by typing bin/dev in the terminal.
 
