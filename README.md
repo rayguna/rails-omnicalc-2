@@ -94,3 +94,6 @@ At this point, the addition page seems to work.
 
 <a href="/add">Do another addition</a>
 ```
+Troubleshooting Tips: Pay attention to spellings.
+
+- Get the all the forms to work.
