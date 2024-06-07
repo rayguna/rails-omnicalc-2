@@ -41,3 +41,56 @@ end
 ```
 
 At this point, the addition page seems to work.
+
+- The submit form for addition should be directed to wizard_add rather than wizard_addition.
+```
+<h1>New addition</h1>
+
+<form action="/wizard_add">
+  <label for="firsttt_field">Add</label>
+  <input type="text" id="first_field" name="first_num">
+
+  <label for="second_field">to:</label>
+  <input type="text" id="second_field" name="second_num">
+
+  <button>Add!</button>
+</form>
+```
+
+- The addition_controller does not fetch the parameters correctly.
+- The html page textfield ids within views/addition_templates/add_form.html.erb don't match with those within app/controller/addition_controller.rb. Here is the corrected version of the add_form.html.erb.
+```
+<h1>New addition</h1>
+
+<form action="/wizard_add">
+  <label for="first_field">Add</label>
+  <input type="text" id="first_number" name="first_num">
+
+  <label for="second_field">to:</label>
+  <input type="text" id="second_number" name="second_num">
+
+  <button>Add!</button>
+</form>
+```
+- To figure out the variables names that are being passed around, add the tag <%=params%> within views/addition_templates/add_results.html.erb
+
+- Must also pass the parameters correctly in the views/addition_templates/add_results.html.erb page.
+```
+<h1>Addition</h1>
+
+<dl>
+  <dt>First number</dt>
+  <dd><%=@first_number %></dd>
+
+  <dt>Second number</dt>
+  <dd><%= @second_number %></dd>
+
+  <%@result=@first_number.to_f + @second_number.to_f%>
+
+  <dt>Result</dt>
+  <dd><%= @result %></dd>
+</dl>
+
+
+<a href="/add">Do another addition</a>
+```
