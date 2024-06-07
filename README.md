@@ -96,4 +96,6 @@ At this point, the addition page seems to work.
 ```
 Troubleshooting Tips: Pay attention to spellings.
 
-- Get the all the forms to work.
+- The rest of the bugs were found to be naming inconsistencies in the form objects and in passing parameters in the RCAV elements. 
+
+***
