@@ -8,6 +8,25 @@ Lesson: https://learn.firstdraft.com/lessons/124
 
 Notes: This is a good template example for building a rails-based web app to mimic the folder structure.
 
+***
+Important folders:
+
+R: ROUTES.RB
+- config/routes.rb
+- This file contains the url routes (e.g., "/").
+
+C: CONTROLLER RB FILES
+- controllers>[addition_controller.rb, division_controller.rb, multiplication_controller.rb, subtraction_controller.rb]
+- this is where the children classes of ApplicationController and methods are stored.
+- I like how the classes are separated into different files. Nonetheless, it is the class names that matter.
+- You may do computation within the class methods and set the variables to @variable_name.
+- render the template at the end.
+
+V: VIEWS
+- app/views/subfolder/*.html.erb
+- this is where the html files are stored.
+***
+
 1. Run the app by typing bin/dev in the terminal.
 
 2. Review the error messages to fix the bugs. Trace each of the RCAV files.
